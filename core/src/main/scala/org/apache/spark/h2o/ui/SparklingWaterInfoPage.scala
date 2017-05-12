@@ -92,9 +92,11 @@ case class SparklingWaterInfoPage(parent: SparklingWaterUITab) extends WebUIPage
             <a href={flowUrl()}>
               <strong>Flow UI</strong>
             </a>
+          <li>
             <a href={downloadLogsUrl()}>
               <strong>Download H2O Logs</strong>
             </a>
+          </li>
           </li>
         </ul>
       </div>
