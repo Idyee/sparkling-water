@@ -44,6 +44,8 @@ case class SparklingWaterInfoPage(parent: SparklingWaterUITab) extends WebUIPage
 
   private def flowUrl(): String = s"http://${listener.h2oCloudInfo.get.localClientIpPort}"
 
+  private def downloadLogsUrl(): String = s"${flowUrl()}/3/Logs/download"
+
   private def swProperties(): Seq[(String, String)] = listener.swProperties.get
 
   private def swInfo(): Seq[(String, String)] = {
@@ -89,6 +91,9 @@ case class SparklingWaterInfoPage(parent: SparklingWaterUITab) extends WebUIPage
           <li>
             <a href={flowUrl()}>
               <strong>Flow UI</strong>
+            </a>
+            <a href={downloadLogsUrl()}>
+              <strong>Download H2O Logs</strong>
             </a>
           </li>
         </ul>
